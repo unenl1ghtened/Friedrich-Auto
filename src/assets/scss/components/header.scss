@@ -1,0 +1,254 @@
+.header {
+  &__top {
+    gap: 20px;
+    padding: 28px 0;
+
+    @include flex-all-between;
+
+    &-left {
+      gap: 10px;
+      width: 100%;
+      max-width: 899px;
+
+      @include flex-justify-between;
+
+      @include medium-desktop {
+        display: block;
+        max-width: 370px;
+      }
+
+      &-logo {
+        gap: 30px;
+
+        @include flex-all-between;
+
+        @include medium-desktop {
+          gap: 10px;
+          max-width: 370px;
+        }
+
+        @include small-desktop {
+          max-width: 344px;
+        }
+
+        @include mobile {
+          max-width: 200px;
+        }
+
+        &-img {
+          width: 69px;
+          height: 60px;
+        }
+      }
+
+      &-map {
+        gap: 30px;
+
+        @include flex-all-between;
+
+        @include medium-desktop {
+          display: none;
+        }
+
+        &-wrapper {
+          position: relative;
+          border-radius: 10px;
+
+          &-img {
+            border-radius: 10px;
+          }
+
+          &-icon {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 3;
+            width: 30px;
+            height: 30px;
+            background: url('../../images/map-locate.png');
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+    }
+
+    &-right {
+      gap: 10px;
+      width: 100%;
+      max-width: 713px;
+
+      @include flex-all-between;
+
+      @include medium-desktop {
+        gap: 10px;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 710px;
+      }
+
+      @include small-desktop {
+        gap: 10px;
+        max-width: 400px;
+      }
+
+      @include small-tablet {
+        max-width: 100px;
+      }
+
+      &-socials {
+        width: 100%;
+        max-width: 400px;
+
+        @include flex-align-center;
+
+        @include small-desktop {
+          display: none;
+        }
+      }
+
+      &-hours {
+        @include small-tablet {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__socials {
+    &-container {
+      @include flex-align-center;
+
+      &-text {
+        margin-right: 25px;
+        line-height: 1.35;
+
+        span {
+          display: block;
+          margin-top: 2px;
+        }
+      }
+    }
+
+    &-list {
+      gap: 15px;
+
+      @include flex-all-center;
+
+      &-link {
+        display: inline-block;
+        border-radius: 50%;
+        width: 55px;
+        height: 55px;
+
+        @include flex-all-center;
+
+        &--blue {
+          background: var(--accent-color);
+        }
+
+        &--green {
+          background: var(--accent-color-2);
+        }
+      }
+    }
+  }
+
+  &__avatar {
+    position: relative;
+    display: inline-block;
+    margin-right: 22px;
+    width: 69px;
+    height: 90px;
+  }
+
+  &__number {
+    font-size: 18px;
+
+    img {
+      margin-right: 5px;
+      width: 32px;
+      height: 32px;
+    }
+
+    &-span {
+      margin-left: 5px;
+      font-weight: 700;
+      color: var(--accent-color);
+
+      &.phone-diactive {
+        color: #b55b5b;
+      }
+    }
+  }
+
+  &__hours {
+    margin-top: 13px;
+    font-size: 13px;
+
+    &-icon {
+      position: relative;
+      display: inline-block;
+      margin-right: 22px;
+      border-radius: 50%;
+      width: 7px;
+      height: 7px;
+      background: #5bb57f99;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        border-radius: 50%;
+        width: 7px;
+        height: 7px;
+        background: #5bb57f;
+      }
+
+      &::before {
+        left: calc(-100% - 5px);
+        opacity: 0.3;
+      }
+
+      &::after {
+        right: calc(-100% - 5px);
+        opacity: 1;
+      }
+
+      /* stylelint-disable-next-line selector-class-pattern */
+      &.hours-icon--diactive {
+        background-color: #b55b5b99;
+
+        &::before,
+        &::after {
+          background-color: #b55b5b;
+        }
+      }
+    }
+  }
+
+  &__navigation-open {
+    display: none;
+
+    @include flex-align-center;
+
+    @include small-desktop {
+      display: flex;
+    }
+
+    p {
+      @include small-desktop {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.bars {
+  display: none;
+
+  @include small-desktop {
+    display: flex;
+  }
+}
+

@@ -29,6 +29,10 @@ img {
   object-fit: cover;
 }
 
+p {
+  color: var(--text-color);
+}
+
 h1,
 h2,
 h3,
@@ -48,6 +52,7 @@ input {
 
 a {
   text-decoration: none;
+  color: var(--text-color);
 }
 
 ul,
@@ -71,6 +76,13 @@ label {
   margin: 0 auto;
   padding: 0 var(--container-padding);
   max-width: calc(var(--container-width) + (var(--container-padding) * 2));
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.header__container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1830px;
 }
 
 .hidden {

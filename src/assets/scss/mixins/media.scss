@@ -1,5 +1,11 @@
-@mixin small-desktop {
+@mixin medium-desktop {
   @media (max-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin small-desktop {
+  @media (max-width: 1200px) {
     @content;
   }
 }
