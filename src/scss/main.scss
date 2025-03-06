@@ -1,0 +1,9 @@
+@import './mixins/';
+
+header {
+  @include flex-justify-center;
+
+  @include small-desktop {
+    color: red;
+  }
+}
