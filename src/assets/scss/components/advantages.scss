@@ -1,0 +1,106 @@
+.advantages {
+  position: relative;
+  padding: 180px 0 36px;
+
+  @include tablet {
+    padding: 100px 0 36px;
+  }
+
+  @include mobile {
+    padding: 60px 0 0;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: url('../images/man-looking-at-engine.png') no-repeat;
+    background-size: cover;
+    opacity: 0.2;
+    mix-blend-mode: screen;
+  }
+
+  &-icon {
+    width: 51px;
+    height: 51px;
+
+    @include mobile {
+      width: 37px;
+      height: 37px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 80px;
+    max-width: 975px;
+
+    @include mobile {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 20px 30px;
+    align-items: flex-start;
+
+    @include medium-desktop {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    border-radius: 25px;
+    padding: 50px 40px 40px;
+    max-width: 398px;
+    background:
+      linear-gradient(208deg, #080e1899 0%, #111b2b99 44.74%, #080e1899),
+      #25262740;
+    backdrop-filter: blur(52.3039px);
+
+    @include tablet {
+      padding: 35px 30px 30px;
+    }
+
+    @include mobile {
+      padding: 30px;
+    }
+
+    &--bott {
+      margin-top: 117px;
+
+      @include medium-desktop {
+        margin-top: 0;
+      }
+    }
+
+    &-top {
+      @include flex-all-between;
+      margin-bottom: 26px;
+
+      span {
+        font-weight: 2500px;
+        font-size: 22px;
+        color: #fff3;
+
+        @include mobile {
+          display: none;
+        }
+      }
+
+      @include mobile {
+        margin-bottom: 23px;
+      }
+    }
+
+    &-title {
+      margin-bottom: 20px;
+
+      @include mobile {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
