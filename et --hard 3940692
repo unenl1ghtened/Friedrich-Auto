@@ -1,0 +1,12 @@
+[33mab8ac27[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{0}: reset: moving to ab8ac2793c053164ffd9d75ea40ab137543f1274
+[33m3940692[m HEAD@{1}: commit: Created advantage section
+[33mab8ac27[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{2}: commit: Created hero section
+[33m6365aa4[m HEAD@{3}: commit: Created nav-menu for header
+[33m9cb1c5e[m HEAD@{4}: commit: Created header top
+[33mb81101f[m HEAD@{5}: commit: Work with html and images
+[33m0a3fe7d[m HEAD@{6}: commit: Added base styles
+[33m41c9c41[m HEAD@{7}: commit: Added mixins
+[33m9504d9c[m HEAD@{8}: commit: Added Sass
+[33mecdbca1[m HEAD@{9}: commit: Added eslint, prettier, stylelint
+[33ma704ac7[m HEAD@{10}: Branch: renamed refs/heads/master to refs/heads/main
+[33ma704ac7[m HEAD@{12}: commit (initial): First Commit

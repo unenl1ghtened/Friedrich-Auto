@@ -1,0 +1,32 @@
+.blackout {
+  position: relative;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    left: 0;
+  }
+
+  &::before {
+    top: 0;
+    bottom: 20%;
+    z-index: 0;
+    background: linear-gradient(180deg, #01040f 0%, #01040f00 100%);
+  }
+
+  &::after {
+    top: 50%;
+    bottom: -1px;
+    z-index: 5;
+    background: linear-gradient(
+      180deg,
+      #01040f 0%,
+      #01040fcc 24%,
+      #01040f8c 52.71%,
+      #01040f00 100%
+    );
+    transform: rotate(180deg);
+  }
+}
