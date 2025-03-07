@@ -76,6 +76,14 @@ label {
   margin: 0 auto;
   padding: 0 var(--container-padding);
   max-width: calc(var(--container-width) + (var(--container-padding) * 2));
+
+  @include tablet {
+    padding: 0 45px;
+  }
+
+  @include mobile {
+    padding: 0 28px;
+  }
 }
 
 /* stylelint-disable-next-line selector-class-pattern */
@@ -83,6 +91,14 @@ label {
   margin: 0 auto;
   padding: 0 15px;
   max-width: 1830px;
+
+  @include tablet {
+    padding: 0 36px;
+  }
+
+  @include mobile {
+    padding: 0 30px;
+  }
 }
 
 .hidden {

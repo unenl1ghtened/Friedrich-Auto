@@ -1,4 +1,7 @@
 .header {
+  position: inherit;
+  z-index: 10;
+
   &__top {
     gap: 20px;
     border-bottom: 2px solid #ffffff05;
@@ -20,6 +23,12 @@
 
       &-logo {
         gap: 30px;
+
+        &-text {
+          @include mobile {
+            font-size: 8px;
+          }
+        }
 
         @include flex-all-between;
 

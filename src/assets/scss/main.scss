@@ -1,6 +1,53 @@
+/* stylelint-disable no-invalid-position-at-import-rule */
 @import './mixins/';
 @import './base/';
 @import './globals/';
 
 // Components
 @import './components/header';
+@import './components/hero';
+@import './components/aadvantages';
+
+/* stylelint-disable-next-line selector-class-pattern */
+.hero__wrapper-img {
+  position: relative;
+  overflow: hidden;
+  background: url('/assets/images/hero-img.jpg') no-repeat 50% 50%;
+  background-size: cover;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 0;
+  }
+
+  &::before {
+    top: 0;
+    bottom: 20%;
+    background: linear-gradient(180deg, #01040f 0%, #01040f00 100%);
+  }
+
+  &::after {
+    top: 50%;
+    bottom: -1px;
+    background: linear-gradient(
+      180deg,
+      #01040f 0%,
+      #01040fcc 24%,
+      #01040f8c 52.71%,
+      #01040f00 100%
+    );
+    transform: rotate(180deg);
+  }
+
+  &-effect {
+    position: absolute;
+    inset: 0;
+    background: url('../images/light-effect.png');
+  }
+}
+
+@import './components/footer';

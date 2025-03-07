@@ -1,0 +1,238 @@
+.footer {
+  padding: 40px 0 50px;
+
+  &__icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  &__wrapper {
+    gap: 50px 15px;
+    border-bottom: 1px solid #d9d9d926;
+    padding-bottom: 70px;
+
+    @include flex-justify-between;
+
+    @include tablet {
+      flex-direction: column;
+    }
+
+    @include mobile {
+      gap: 30px;
+      padding-bottom: 30px;
+    }
+  }
+
+  &__about {
+    width: 100%;
+    max-width: 322px;
+
+    @include tablet {
+      max-width: 250px;
+    }
+
+    &-logo {
+      gap: 25px;
+      margin-bottom: 30px;
+
+      @include flex-align-center;
+
+      @include tablet {
+        margin-bottom: 20px;
+      }
+
+      @include mobile {
+        margin-bottom: 15px;
+      }
+    }
+
+    &-text {
+      margin-bottom: 76px;
+
+      @include tablet {
+        margin-bottom: 40px;
+      }
+
+      @include mobile {
+        margin-bottom: 0;
+      }
+
+      br {
+        @include mobile {
+          display: none;
+        }
+      }
+    }
+
+    &-legal {
+      display: flex;
+      flex-direction: column;
+      font-size: 18px;
+      line-height: 1.55;
+
+      @include mobile {
+        display: none;
+      }
+
+      p {
+        color: #ffffffb3;
+      }
+    }
+  }
+
+  &__content {
+    gap: 30px 5px;
+    align-items: end;
+    width: 100%;
+    max-width: 1240px;
+
+    @include flex-justify-between;
+
+    @include small-tablet {
+      gap: 30px 10px;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__title {
+    img {
+      margin-bottom: 20px;
+    }
+
+    &-text {
+      margin-bottom: 25px;
+
+      @include mobile {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__nav {
+    &-list {
+      display: inline-flex;
+      gap: 15px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &-link {
+      display: inline-block;
+    }
+  }
+
+  &__services {
+    &-list {
+      display: grid;
+      gap: 15px;
+      align-items: start;
+      grid-template-columns: repeat(2, max-content);
+
+      @include medium-desktop {
+        grid-template-columns: repeat(1, max-content);
+      }
+    }
+
+    &-link {
+      display: inline-block;
+      width: max-content;
+    }
+  }
+
+  &__contacts {
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-map {
+      @include mobile {
+        order: 3;
+        margin-top: 15px;
+      }
+
+      br {
+        @include mobile {
+          display: none;
+        }
+      }
+
+      &-link {
+        display: none;
+
+        @include mobile {
+          display: inline-flex;
+          margin-top: 10px;
+        }
+      }
+
+      span {
+        @include mobile {
+          display: block;
+          font-weight: 700;
+        }
+      }
+    }
+
+    p {
+      margin-bottom: 22px;
+    }
+
+    &-link {
+      @include flex-justify-between;
+    }
+  }
+
+  &__about-legal-2 {
+    display: none;
+
+    @include mobile {
+      display: block;
+      font-size: 13px;
+      line-height: 1.55;
+    }
+  }
+
+  &__nav,
+  &__services,
+  &__contacts {
+    @include mobile {
+      border-bottom: 1px solid #d9d9d926;
+      padding-bottom: 30px;
+      width: 100%;
+    }
+  }
+
+  &__bottom {
+    padding-top: 50px;
+
+    &-wrapper {
+      gap: 30px 15px;
+      flex-wrap: wrap;
+      font-size: 18px;
+
+      @include flex-justify-between;
+
+      @include mobile {
+        gap: 20px 15px;
+      }
+    }
+
+    &-politic {
+      display: flex;
+      flex-direction: column;
+      font-size: 18px;
+      row-gap: 8px;
+    }
+  }
+}
+
+.hover {
+  &-link {
+    color: #ffffffb3;
+  }
+
+  &-link:hover {
+    color: #fff;
+  }
+}
